@@ -1,0 +1,118 @@
+[gd_scene load_steps=7 format=3 uid="uid://58h3pf0ptmep"]
+
+[ext_resource type="Script" path="res://2.gd" id="1_yx16s"]
+[ext_resource type="Script" path="res://1/Next.gd" id="2_one47"]
+
+[sub_resource type="Gradient" id="Gradient_unt34"]
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_vwbtf"]
+gradient = SubResource("Gradient_unt34")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_s35uv"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_fqynh"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_yx16s")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+modulate = Color(0.109341, 0.109341, 0.109341, 1)
+z_index = -100
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("GradientTexture2D_vwbtf")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -7.0
+offset_top = 4.0
+offset_right = 6.46997
+offset_bottom = 5.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 32
+theme_override_constants/margin_top = 32
+theme_override_constants/margin_right = 32
+theme_override_constants/margin_bottom = 32
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+custom_minimum_size = Vector2(749.47, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+theme_override_constants/separation = 32
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer"]
+z_index = 1
+layout_mode = 2
+theme_override_font_sizes/font_size = 48
+text = "Tasker Installed!"
+
+[node name="CheckBox" type="CheckBox" parent="MarginContainer/VBoxContainer"]
+z_index = 100
+layout_mode = 2
+theme_override_font_sizes/font_size = 33
+theme_override_styles/focus = SubResource("StyleBoxEmpty_s35uv")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_fqynh")
+button_pressed = true
+text = "Open Tasker when finished?"
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="MarginContainer"]
+z_index = -99
+layout_mode = 2
+size_flags_vertical = 8
+alignment = 2
+
+[node name="Control" type="Control" parent="MarginContainer/VBoxContainer2"]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer2/Control"]
+layout_mode = 2
+offset_left = 649.0
+offset_top = -67.0
+offset_right = 749.0
+offset_bottom = -4.0
+size_flags_horizontal = 8
+alignment = 2
+
+[node name="Next" type="Button" parent="MarginContainer/VBoxContainer2/Control/HBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "Finish"
+script = ExtResource("2_one47")
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="MarginContainer/VBoxContainer2/Control"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -67.0
+offset_right = 79.0
+offset_bottom = -4.0
+grow_vertical = 2
+size_flags_horizontal = 8
+
+[node name="Exit" type="Button" parent="MarginContainer/VBoxContainer2/Control/HBoxContainer2"]
+visible = false
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer2/Control/HBoxContainer/Next" to="." method="_on_next_pressed"]

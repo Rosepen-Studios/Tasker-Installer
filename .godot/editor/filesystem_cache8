@@ -1,0 +1,12 @@
+ea4bc82a6ad023ab7ee23ee620429895
+::res://::1731946811
+2.gd::GDScript::-1::1731845909::0::1::::<>Control<>::
+README.md::TextFile::-1::1731845909::0::1::::<><>::
+::res://1/::1731846417
+1.gd::GDScript::-1::1731846376::0::1::::<>Control<>::
+Exit.gd::GDScript::-1::1731845909::0::1::::<>Button<>::
+icon.svg::CompressedTexture2D::5217569795848627441::1731845909::1731845914::1::::<><>::
+Main.tscn::PackedScene::3205485461755263166::1731846417::0::1::::<><>::res://1/Next.gd<>res://1/1.gd<>res://1/Exit.gd
+Next.gd::GDScript::-1::1731845909::0::1::::<>Button<>::
+::res://2/::1731845909
+2.tscn::PackedScene::2174265592934612143::1731845909::0::1::::<><>::res://2.gd<>res://1/Next.gd

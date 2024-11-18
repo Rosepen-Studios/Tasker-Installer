@@ -66,7 +66,7 @@ text = "Install Tasker?"
 modulate = Color(0.720467, 0.720468, 0.720467, 1)
 layout_mode = 2
 theme_override_font_sizes/font_size = 38
-text = "Are you sure you want to install Tasker version 0.4?"
+text = "Are you sure you want to install the Open Beta Distribution 1 of Tasker 1.0?"
 horizontal_alignment = 1
 autowrap_mode = 2
 

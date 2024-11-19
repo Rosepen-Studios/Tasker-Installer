@@ -1,8 +1,8 @@
 extends Control
 
-@onready var next: Button = $MarginContainer/VBoxContainer2/Control/HBoxContainer/Next
+@onready var next: Button = $MarginContainer/VBoxContainer2/Control/MarginContainer/HBoxContainer/Next
 @onready var tick: CheckBox = $MarginContainer/VBoxContainer/CheckBox
-var os ="WIN"
+var os ="MAC"
 func _ready() -> void:
 	next.grab_focus()
 

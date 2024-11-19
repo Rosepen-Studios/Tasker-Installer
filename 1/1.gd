@@ -1,12 +1,14 @@
 extends Control
 
-var os = "WIN"
+var os = "MAC"
 @onready var web: HTTPRequest = $HTTPRequest
-@onready var next: Button = $MarginContainer/VBoxContainer2/Control/HBoxContainer/Next
+@onready var next: Button = $MarginContainer/VBoxContainer2/Control/MarginContainer/HBoxContainer/Next
 @onready var title: Label = $MarginContainer/VBoxContainer/HBoxContainer/Label
 @onready var text: Label = $MarginContainer/VBoxContainer/Label
 @onready var timer: Timer = $Timer
-@onready var exit: Button = $MarginContainer/VBoxContainer2/Control/HBoxContainer2/Exit
+@onready var exit: Button = $MarginContainer/VBoxContainer2/Control/MarginContainer/HBoxContainer2/Exit
+@onready var loop: AnimationPlayer = $MarginContainer/VBoxContainer2/Control/MarginContainer/HBoxContainer3/Control/AnimationPlayer
+@onready var load: HBoxContainer = $MarginContainer/VBoxContainer2/Control/MarginContainer/HBoxContainer3
 var release_link:String = "https://github.com/Firepixel85/Tasker-Labs/releases/download/obd_1.0/Tasker."
 var user 
 
@@ -15,6 +17,8 @@ func _ready() -> void:
 	next.grab_focus()
 	
 func _on_next_pressed() -> void:
+	load.visible = true
+	loop.play("Load")
 	if os == "MAC":
 		next.visible = false
 		exit.visible = false
@@ -88,3 +92,7 @@ func _on_next_pressed() -> void:
 
 func _on_exit_pressed() -> void:
 	get_tree().quit()
+
+
+func _on_animation_player_animation_finished(anim_name: StringName) -> void:
+	loop.play("Load")

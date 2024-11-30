@@ -187,6 +187,7 @@ texture_under = ExtResource("3_ufpru")
 texture_progress = ExtResource("4_fpapo")
 
 [node name="TextureProgressBar2" type="TextureProgressBar" parent="MarginContainer/VBoxContainer2/Control/MarginContainer/HBoxContainer3/Control"]
+layout_mode = 0
 offset_left = -256.0
 offset_right = 221.0
 offset_bottom = 19.0

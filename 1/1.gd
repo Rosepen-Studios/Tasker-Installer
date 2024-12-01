@@ -9,7 +9,7 @@ var os = "MAC"
 @onready var exit: Button = $MarginContainer/VBoxContainer2/Control/MarginContainer/HBoxContainer2/Exit
 @onready var loop: AnimationPlayer = $MarginContainer/VBoxContainer2/Control/MarginContainer/HBoxContainer3/Control/AnimationPlayer
 @onready var load: HBoxContainer = $MarginContainer/VBoxContainer2/Control/MarginContainer/HBoxContainer3
-var release_link:String = "https://github.com/Firepixel85/Tasker-Labs/releases/download/obd_1.0/Tasker."
+var release_link:String = "https://github.com/Firepixel85/Tasker-Labs/releases/download/1.0_obd2/Tasker."
 var user 
 
 func _ready() -> void:

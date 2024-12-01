@@ -13,7 +13,7 @@ config_version=5
 config/name="Tasker_Installer"
 run/main_scene="res://1/Main.tscn"
 config/features=PackedStringArray("4.3", "GL Compatibility")
-config/icon="res://Icon_Windows.png"
+config/icon="res://Icon_Mac.png"
 
 [display]
 

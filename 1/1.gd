@@ -26,7 +26,7 @@ func _on_next_pressed() -> void:
 		text.text = "Removing past installations"
 		var output = []
 		var term = OS.execute("/bin/bash",["-c"]+["cd .. && cd .. && cd .. && cd .. && cd .. && rm -rf /Applications/Tasker.app"],output)
-		
+
 		timer.start()
 		await timer.timeout
 		text.text = "Getting file from remote server             (This might take some time)"
@@ -34,20 +34,26 @@ func _on_next_pressed() -> void:
 		web.request(release_link+"Mac.zip")
 		
 		await web.request_completed
-		text.text = "File retrived, expanding ZIP"
-		
+		text.text = "File retrieved, expanding ZIP"
+
+		output = []
 		term = OS.execute("/bin/bash",["-c"]+["cd .. && cd .. && cd .. && cd .. && cd .. && unzip '/Users/"+user+"/Library/Application Support/Godot/app_userdata/Tasker_Installer/Tasker.zip' -d  '/Users/"+user+"/Library/Application Support/Godot/app_userdata/Tasker_Installer'"],output)
 		timer.start()
 		await timer.timeout
+		print(output)
 		text.text = "Moving app to Applications folder"
-		
+
+		output = []
 		term = OS.execute("/bin/bash",["-c"]+["cd .. && cd .. && cd .. && cd .. && cd .. && mv '/Users/"+user+"/Library/Application Support/Godot/app_userdata/Tasker_Installer/Tasker.app' /Applications"],output)
 		timer.start()
 		await timer.timeout
+		print(output)
+		output = []
 		term = OS.execute("/bin/bash",["-c"]+["cd .. && cd .. && cd .. && cd .. && cd .. && rm '/Users/"+user+"/Library/Application Support/Godot/app_userdata/Tasker_Installer/Tasker.zip'"],output)
 		text.text = "Deleting ZIP file"
 		timer.start()
 		await timer.timeout
+		print(output)
 
 		get_tree().change_scene_to_file("res://2/2.tscn")
 	elif os == "WIN":
@@ -67,7 +73,7 @@ func _on_next_pressed() -> void:
 		term = OS.execute("POWERSHELL.exe", ["Remove-Item -Path \"C:\\Tasker\\Tasker.exe\""],output)
 		timer.start()
 		await timer.timeout
-		text.text = "File retrived, expanding ZIP"
+		text.text = "File retrieved, expanding ZIP"
 
 
 		term = OS.execute("POWERSHELL.exe", ["tar -xf C:\\Users\\"+user+"\\AppData\\Roaming\\Godot\\app_userdata\\Tasker_Installer\\Tasker.zip -C C:\\Users\\"+user+"\\AppData\\Roaming\\Godot\\app_userdata\\Tasker_Installer"],output)

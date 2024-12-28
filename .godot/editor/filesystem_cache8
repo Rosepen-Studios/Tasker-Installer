@@ -1,20 +1,20 @@
-bdbec74c6e5bd72edee867077d70896c
-::res://::1733146918
-2.gd::GDScript::-1::1732047807::0::1::::<>Control<>::
-Background.png::CompressedTexture2D::4741738328874943621::1732048201::1732048202::1::::<><>::
-export_presets.cfg::TextFile::-1::1733045509::0::1::::<><>::
-Icon.png::CompressedTexture2D::2823963294593508995::1732047301::1732047307::1::::<><>::
-Icon_Mac.png::CompressedTexture2D::5530346213690554361::1732046276::1732046877::1::::<><>::
-Icon_Windows.png::CompressedTexture2D::9044915457497827982::1732046286::1732046877::1::::<><>::
-README.md::TextFile::-1::1731844464::0::1::::<><>::
-::res://1/::1733146913
-1.gd::GDScript::-1::1733146913::0::1::::<>Control<>::
-Exit.gd::GDScript::-1::1732046393::0::1::::<>Button<>::
-icon.svg::CompressedTexture2D::5217569795848627441::1732046393::1732046536::1::::<><>::
-Main.tscn::PackedScene::3205485461755263166::1732386004::0::1::::<><>::res://1/1.gd<>uid://b8s60csxybh86::::res://Background.png<>uid://bgh7i65clmabr::::res://Icon.png<>uid://y4j2isk1cucj::::res://Progreass Bar/Under.png<>uid://cjtllno3827nd::::res://Progreass Bar/Progress.png
-Next.gd::GDScript::-1::1732046393::0::1::::<>Button<>::
-::res://2/::1732386004
-2.tscn::PackedScene::2174265592934612143::1732386004::0::1::::<><>::res://2.gd<>res://1/Next.gd<>uid://b8s60csxybh86::::res://Background.png<>uid://bgh7i65clmabr::::res://Icon.png
-::res://Progreass Bar/::1732048545
-Progress.png::CompressedTexture2D::5444452373857217573::1732048544::1732048545::1::::<><>::
-Under.png::CompressedTexture2D::1744994320033322509::1732048447::1732048461::1::::<><>::
+ea4bc82a6ad023ab7ee23ee620429895
+::res://::1735402273
+2.gd::GDScript::-1::1735402272::0::1::::<>Control<>::
+Background.png::CompressedTexture2D::4741738328874943621::1732051437::1735402277::1::::<><>::
+export_presets.cfg::TextFile::-1::1735402273::0::1::::<><>::
+Icon.png::CompressedTexture2D::2823963294593508995::1732051437::1735402276::1::::<><>::
+Icon_Mac.png::CompressedTexture2D::5530346213690554361::1732046539::1732046545::1::::<><>::
+Icon_Windows.png::CompressedTexture2D::9044915457497827982::1732046539::1732046545::1::::<><>::
+README.md::TextFile::-1::1731845909::0::1::::<><>::
+::res://1/::1735402273
+1.gd::GDScript::-1::1735402273::0::1::::<>Control<>::
+Exit.gd::GDScript::-1::1731845909::0::1::::<>Button<>::
+icon.svg::CompressedTexture2D::5217569795848627441::1731845909::1731845914::1::::<><>::
+Main.tscn::PackedScene::3205485461755263166::1732051565::0::1::::<><>::res://1/1.gd<>uid://b8s60csxybh86::::res://Background.png<>uid://bgh7i65clmabr::::res://Icon.png<>uid://y4j2isk1cucj::::res://Progreass Bar/Under.png<>uid://cjtllno3827nd::::res://Progreass Bar/Progress.png
+Next.gd::GDScript::-1::1731845909::0::1::::<>Button<>::
+::res://2/::1735402272
+2.tscn::PackedScene::2174265592934612143::1732051565::0::1::::<><>::res://2.gd<>res://1/Next.gd<>uid://b8s60csxybh86::::res://Background.png<>uid://bgh7i65clmabr::::res://Icon.png
+::res://Progreass Bar/::1735402272
+Progress.png::CompressedTexture2D::5444452373857217573::1732051437::1735402276::1::::<><>::
+Under.png::CompressedTexture2D::1744994320033322509::1732051437::1735402276::1::::<><>::
